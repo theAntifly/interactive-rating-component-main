@@ -5,12 +5,17 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
 body {
   width: 100vw;
   height: 100vh;
+  display: flex;
   font-family: "Overpass", sans-serif;
   font-size: 15px;
-  display: flex;
   color: hsl(217, 12%, 63%);
 }
 
@@ -19,10 +24,13 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: hsl(216, 12%, 8%);
 }
 
 .card {
+  overflow: hidden;
+  position: relative;
   height: 400px;
   width: 400px;
   margin: 0 auto;
@@ -129,6 +137,11 @@ body {
   text-align: center;
 }
 
+.thank-you {
+  height: 108px;
+  width: 162px;
+}
+
 .rating-choice {
   display: flex;
   height: 40px;
@@ -149,4 +162,13 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 600px) {
+  .card {
+    max-height: 400px;
+    height: 60%;
+    margin: 0px 10px;
+    padding: 2% 5%;
+  }
 }
